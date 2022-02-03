@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: -6760343991189674737, guid: 11ae631f618994aa09a7df6f630ddd4f, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 614826632986450424, guid: edd7414907d564360b765e137234bbca, type: 3}
     - target: {fileID: 8567580731578712724, guid: 11ae631f618994aa09a7df6f630ddd4f, type: 3}
       propertyPath: m_IsKinematic
       value: 1
