@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HighScore : MonoBehaviour
 {
-    static public int score = 1000
+    static public int score = 1000;
     // Start is called before the first frame update
     void Awake () {
         if (PlayersPrefs.HasKey("HighScore")) {
