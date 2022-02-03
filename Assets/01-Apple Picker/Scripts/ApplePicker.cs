@@ -18,7 +18,12 @@ public class ApplePicker : MonoBehaviour
             pos.y = basketBottomY + ( basketSpacingY * i );
             tBasketGO.transform.position = pos;
         }
-        
+        public void AppleDestroyed() {
+            GameObject [] tAppleArray=GameObject.FindGameObjectsWithTag("Apple");
+            foreach ( GameObject tGo in tAppleArray )  {
+                Destroy( tGo )
+            }
+        }
     }
 
     // Update is called once per frame
