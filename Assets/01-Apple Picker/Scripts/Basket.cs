@@ -13,7 +13,8 @@ public class Basket : MonoBehaviour {
        scoreGT.text = "0";
     }
     // Update is called once per frame
-    void Update() {
+    void Update() 
+    {
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
         Vector3 mousePos3D = Camera.main.ScreenToWorldPoint( mousePos2D );
@@ -28,7 +29,6 @@ public class Basket : MonoBehaviour {
             int score = int.Parse( scoreGT.text );
             score += 100;
             scoreGT.text = score.ToString();
-
             if (score > HighScore.score) {
                 HighScore.score = score;
             }

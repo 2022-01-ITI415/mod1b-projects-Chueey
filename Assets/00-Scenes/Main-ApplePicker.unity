@@ -403,6 +403,7 @@ MonoBehaviour:
   numBaskets: 3
   basketBottomY: -14
   basketSpacingY: 2
+  basketList: []
 --- !u!20 &792234107
 Camera:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 805387951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80356e200f7234fd9b4a8d0989ff4d92, type: 3}
+  m_Script: {fileID: 11500000, guid: 98623abe26788452bb65f737a21e9a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1572004184
