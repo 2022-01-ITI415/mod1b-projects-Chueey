@@ -3,28 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HighScore : MonoBehaviour
-{
-    static public int score = 1000;
+public class HighScore : MonoBehaviour {
+    static public int    score = 1000;
     // Start is called before the first frame update
     void Awake () {
-        if (PlayersPrefs.HasKey("HighScore")) {
-            score = PlayersPrefs.GetInt("HighScore");
+        if (PlayerPrefs.HasKey("HighScore")) {
+            score = PlayerPrefs.GetInt("HighScore");
         }
-        PlayersPrefs.SetInt("HighScore", score);
-    }
-    void Start()
-    {
-        
+
+        PlayerPrefs.SetInt("HighScore", score);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         Text gt = this.GetComponent<Text>();
-        gt.text = "High Score: "+score;
-        if (score > PlayersPrefs.GetInt("HighScore")) {
-            PlayersPrefs.SetInt("HighScore", score);
+        gt.text = "High Score: " +score;
+        if (score > PlayerPrefs.GetInt("HighScore")) {
+            PlayerPrefs.SetInt("HighScore", score);
         }
     }
 }

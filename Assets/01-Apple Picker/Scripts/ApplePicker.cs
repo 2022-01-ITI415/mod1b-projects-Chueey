@@ -21,21 +21,22 @@ public class ApplePicker : MonoBehaviour{
             tBasketGO.transform.position = pos;
             basketList.Add( tBasketGO ); 
         }
-        public void AppleDestroyed() {
-            GameObject[] tAppleArray=GameObject.FindGameObjectsWithTag("Apple");
-            foreach ( GameObject tGo in tAppleArray ) {
-            Destroy( tGo ) ;
+    }
+    public void AppleDestroyed() {
+        GameObject[] tAppleArray=GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject tGO in tAppleArray )
+            Destroy( tGO );
             int basketIndex = basketList.Count-1;
             GameObject tBasketGO = basketList[basketIndex];
             basketList.RemoveAt( basketIndex );
-            Destroy( tBasketGo );
-            }
+            Destroy (tBasketGO );
 
             if ( basketList.Count == 0 ) {
                 SceneManager.LoadScene("ApplePicker");
             }   
-        }
     }
+        
+
 
     // Update is called once per frame
     void Update()
