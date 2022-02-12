@@ -8,7 +8,7 @@ public class ProjectileLine : MonoBehaviour
    [Header("Set in Inspector")]
     public float        minDist = 1.0f;
 
-    private LineRender      line;
+    private LineRenderer      line;
     private GameObject      _poi;
     private List<Vector3>   points;
 
@@ -45,7 +45,7 @@ public class ProjectileLine : MonoBehaviour
             Vector3 launchPosDiff = pt - Slingshot.LAUNCH_POS;
             points.Add ( pt + launchPosDiff );
             points.Add (pt);
-            line.positionCount = 22;
+            line.positionCount = 2;
             line.SetPosition(0, points[0] );
             line.SetPosition(1, points[1] );
             line.enabled = true;
