@@ -153,11 +153,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63527795b2764840b40d481c66d8594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 0}
+  prefabProjectile: {fileID: 8493797553469509831, guid: 66cce7f8e500e43bc81932110f96f06e, type: 3}
+  velocityMult: 10
   launchPoint: {fileID: 0}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 0}
-  aimingMode: 0
+  aimingMode: 1
 --- !u!135 &235365741
 SphereCollider:
   m_ObjectHideFlags: 0
