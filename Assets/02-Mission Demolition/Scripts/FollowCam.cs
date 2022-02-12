@@ -23,15 +23,16 @@ public class FollowCam : MonoBehaviour
         }else {
             destination = POI.transform.position;
             if (POI.tag == "Projectile") {
-                if (POI.GetComponent<Rigidbody>().IsSleeping() ) {
-                    POI = null;
-                    return;
+                if ( POI.GetComponent<Rigidbody>().IsSleeping() ) {
+                    POI = null ;
+                    return ;
                 }
             }
         }
         destination.x = Mathf.Max( minXY.x, destination.x);
         destination.y = Mathf.Max( minXY.y, destination.y);
         destination = Vector3.Lerp(transform.position, destination, easing);
+        
         destination.z = camZ;
         transform.position = destination;
         Camera.main.orthographicSize = destination.y + 10;
