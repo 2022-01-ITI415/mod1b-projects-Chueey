@@ -7,6 +7,7 @@ TagManager:
   - Apple
   - Projectile
   - Snowball
+  - Street
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - AppleTree
   - Apple
   - Basket
-  - 
-  - 
+  - Stormcloud
+  - Snowball
   - 
   - 
   - 
