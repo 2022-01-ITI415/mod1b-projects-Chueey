@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AppleTree : MonoBehaviour {
+public class Stormcloud : MonoBehaviour
+{
     [Header("Set in Inspector")]
     // Start is called before the first frame update
-    public GameObject applePrefab;
+    public GameObject snowballPrefab;
     
     public float    speed = 1f;
    
@@ -13,15 +14,16 @@ public class AppleTree : MonoBehaviour {
     
     public float    chanceToChangeDirections = 0.1f;
     
-    public float    secondsBetweenAppleDrops = 1f;
+    public float    secondsBetweenSnowballDrops = 1f;
 
+    
     void Start () {
-        Invoke( "DropApple", 2f );
+        Invoke( "DropSnowball", 2f );
     }
     void DropApple() {
-        GameObject apple = Instantiate<GameObject>( applePrefab );
-        apple.transform.position = transform.position;
-        Invoke( "DropApple", secondsBetweenAppleDrops );
+        GameObject Snowball = Instantiate<GameObject>( snowballPrefab );
+        Snowball.transform.position = transform.position;
+        Invoke( "DropSnowball", secondsBetweenSnowballDrops );
     }
 
     void Update () {
@@ -34,7 +36,7 @@ public class AppleTree : MonoBehaviour {
     } else if ( pos.x > leftAndRightEdge ) {
         speed = -Mathf.Abs(speed);
     } else if ( Random.value < chanceToChangeDirections ) {
-        speed *= -10;
+        speed *= -1;
     }
     } 
     void FixedUpdate () {
