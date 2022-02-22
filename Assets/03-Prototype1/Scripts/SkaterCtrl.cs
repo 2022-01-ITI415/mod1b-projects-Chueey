@@ -50,4 +50,13 @@ public class SkaterCtrl : MonoBehaviour
         isJumping = true;
     }
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Collectible"))
+        {
+            other.gameObject.SetActive(false);
+        }
+        
+    }
+      
 }

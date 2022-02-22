@@ -8,6 +8,8 @@ TagManager:
   - Projectile
   - Snowball
   - Street
+  - Skater
+  - Collecible
   layers:
   - Default
   - TransparentFX
